@@ -9,11 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Configure PHPUnit
-        uses: php-actions/phpunit@v3
-        with:
-          configuration: "test/phpunit/phpunit.xml"
-          memory_limit: "256M"
-
       - name: Run PHPUnit tests
         run: ./test/phpunit/phpunit AllTests.php
