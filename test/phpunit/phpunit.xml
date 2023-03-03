@@ -17,7 +17,7 @@
 	</php>
 	<testsuites>
 		<testsuite>
-			<file>test/phpunit/AllTests.php</file>
+			<file>AllTests.php</file>
 		</testsuite>
 	</testsuites>
 	<filter>
