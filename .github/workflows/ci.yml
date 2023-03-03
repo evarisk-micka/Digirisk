@@ -1,0 +1,20 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: php-actions/composer@v6 # or alternative dependency management
+
+      - name: PHPUnit tests
+        uses: php-actions/phpunit@v3
+        with:
+          configuration: "test/phpunit/phpunit.xml"
+          memory_limit: "256M"
+
+      - name: Run PHPUnit tests
+        run: ./test/phpunit/phpunit AllTests.php
