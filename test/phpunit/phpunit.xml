@@ -15,6 +15,11 @@
 		<ini name="memory_limit" value="4G" />
 		<!-- Also don't forget to change suhosin.memory_limit=4G -->
 	</php>
+	<testsuites>
+		<testsuite>
+			<file>test/phpunit/AllTests.php</file>
+		</testsuite>
+	</testsuites>
 	<filter>
 		<whitelist addUncoveredFilesFromWhitelist="true">
 			<directory suffix=".class.php">../../htdocs/</directory>

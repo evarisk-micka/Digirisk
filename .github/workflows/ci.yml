@@ -20,7 +20,7 @@ jobs:
         run: vendor/bin/phpunit --configuration test/phpunit/phpunit.xml
 
       - name: Test dir
-        run: ls -l && cd test && ls -l && cd phpunit && ls -l && ../../ && cd vendor/bin && ls -l
+        run: cd vendor/bin && ls -l
 
       - name: Run PHPUnit tests
         run: vendor/bin/phpunit ./test/phpunit/
