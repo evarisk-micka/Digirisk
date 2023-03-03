@@ -44,6 +44,9 @@ if (!$res && file_exists("../../../../htdocs/master.inc.php")) {
 if (!$res && file_exists("../../../../../htdocs/master.inc.php")) {
 	$res = require_once dirname(__FILE__).'/../../../../../htdocs/master.inc.php';;
 }
+if (!$res) {
+	die("Include of main fails");
+}
 
 if (empty($user->id)) {
 	print "Load permissions for admin user nb 1\n";
