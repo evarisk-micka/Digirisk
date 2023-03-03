@@ -6,6 +6,8 @@ jobs:
   phpunit:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+
       - name: Install PHP
         uses: shivammathur/setup-php@v2
         with:
