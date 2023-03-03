@@ -17,7 +17,7 @@ jobs:
         run: composer install --prefer-dist --no-interaction
 
       - name: Configure PHPUnit
-        run: vendor/bin/phpunit --configuration test/phpunit/phpunit.xml.dist
+        run: ./vendor/bin/phpunit --configuration test/phpunit/phpunit.xml.dist
 
       - name: Run PHPUnit tests
-        run: vendor/bin/phpunit test/phpunit
+        run: ./vendor/bin/phpunit test/phpunit
