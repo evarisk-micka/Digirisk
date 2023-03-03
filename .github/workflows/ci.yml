@@ -19,5 +19,8 @@ jobs:
       - name: Configure PHPUnit
         run: vendor/bin/phpunit --configuration test/phpunit/phpunit.xml
 
+      - name: Test dir
+        run: ls -l
+
       - name: Run PHPUnit tests
-        run: vendor/bin/phpunit test/phpunit/
+        run: vendor/bin/phpunit ./test/phpunit/
