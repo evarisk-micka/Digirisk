@@ -38,6 +38,7 @@ module.exports = defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
+        locale: 'fr-CA',
         // Use prepared auth state.
         storageState: 'playwright/.auth/user.json',
       },
@@ -48,6 +49,7 @@ module.exports = defineConfig({
       name: 'firefox',
       use: {
         ...devices['Desktop Firefox'],
+        locale: 'fr-CA',
         // Use prepared auth state.
         storageState: 'playwright/.auth/user.json',
       },
@@ -56,7 +58,9 @@ module.exports = defineConfig({
 
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'],
+      use: {
+        ...devices['Desktop Safari'],
+        locale: 'fr-CA',
         // Use prepared auth state.
         storageState: 'playwright/.auth/user.json',
       },
@@ -78,10 +82,16 @@ module.exports = defineConfig({
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
+    {
+      name: 'Google Chrome',
+      use: {
+        ...devices['Desktop Chrome'],
+        locale: 'fr-CA',
+        // Use prepared auth state.
+        storageState: 'playwright/.auth/user.json',
+        channel: 'chrome',
+      },
+    },
   ],
 
   /* Run your local dev server before starting the tests */

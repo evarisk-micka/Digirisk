@@ -7,7 +7,7 @@ test('has title', async ({ page }) => {
   await page.goto(digiriskUrl + 'digiriskdolibarrindex.php');
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Welcome to DigiriskDolibarr 9.14.0/);
+  await expect(page).toHaveTitle(/Bienvenue sur DigiriskDolibarr 9.14.0/);
 });
 
 test('get DU page', async ({ page }) => {
@@ -25,7 +25,7 @@ test('get RiskList page', async ({ page }) => {
   const locator = page.locator('.titre.inline-block');
 
   await expect(locator).toBeVisible();
-  await expect(locator).toContainText('DigiriskElementRisksList');
+  await expect(locator).toContainText('Liste des risques');
 });
 
 test('get PreventionPlanList page', async ({ page }) => {
@@ -34,7 +34,7 @@ test('get PreventionPlanList page', async ({ page }) => {
   const locator = page.locator('.titre.inline-block');
 
   await expect(locator).toBeVisible();
-  await expect(locator).toContainText('PreventionPlanList');
+  await expect(locator).toContainText('Liste des plans de prévention');
 });
 
 test('get FirePermitList page', async ({ page }) => {
@@ -43,7 +43,7 @@ test('get FirePermitList page', async ({ page }) => {
   const locator = page.locator('.titre.inline-block');
 
   await expect(locator).toBeVisible();
-  await expect(locator).toContainText('FirePermitList');
+  await expect(locator).toContainText('Liste des permis de feu');
 });
 
 test('get AccidentList page', async ({ page }) => {
@@ -52,7 +52,7 @@ test('get AccidentList page', async ({ page }) => {
   const locator = page.locator('.titre.inline-block');
 
   await expect(locator).toBeVisible();
-  await expect(locator).toContainText('AccidentList');
+  await expect(locator).toContainText('Liste des accidents');
 });
 
 test('get AccidentsCategoriesArea page', async ({ page }) => {
@@ -61,7 +61,7 @@ test('get AccidentsCategoriesArea page', async ({ page }) => {
   const locator = page.locator('.titre.inline-block');
 
   await expect(locator).toBeVisible();
-  await expect(locator).toContainText('AccidentsCategoriesArea');
+  await expect(locator).toContainText('Espace des tags/catégories des accidents');
 });
 
 test('get AccidentInvestigationList page', async ({ page }) => {
@@ -70,7 +70,7 @@ test('get AccidentInvestigationList page', async ({ page }) => {
   const locator = page.locator('.titre.inline-block');
 
   await expect(locator).toBeVisible();
-  await expect(locator).toContainText('AccidentInvestigationList');
+  await expect(locator).toContainText('Liste des enquêtes accidents');
 });
 
 test('get GPUT Organization page', async ({ page }) => {
