@@ -10,7 +10,7 @@ setup('authenticate', async ({ page }) => {
   await page.goto('http://localhost/dolibarr/htdocs/custom/digiriskdolibarr/digiriskdolibarrindex.php');
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Welcome to DigiriskDolibarr 9.14.0/);
+  await expect(page).toHaveTitle("Bienvenue sur DigiriskDolibarr 9.14.0 + multicompany");
 
   // End of authentication steps.
 
